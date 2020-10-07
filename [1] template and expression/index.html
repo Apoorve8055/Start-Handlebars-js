@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handlebars js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+</head>
+<body>
+<script id="handelbars-demo" type="text/x-handelbars-template">
+<div>
+    Hellow {{Data}} .
+</div>
+</script>
+<script>
+var context = {
+"Data":"World"
+};
+var template = $("#handelbars-demo").html();
+vat templateScript = Handelbars.compile(template);
+var html = templateScript(context);
+$(document.body).append(html);
+</script>
+</body>
+</html>
